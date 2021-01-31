@@ -8,11 +8,12 @@ use Illuminate\Database\Eloquent\Model;
 class jumlahKasus2 extends Model
 {
     use HasFactory;
+    protected $table = "jumlah_Kasus2";
+    public $timestamps = true;
+    protected $fillable = ['jumlah_positif','jumlah_meninggal','jumlah_sembuh','id_rw'];
 
-    protected $table = "jumlahKasuses";
-
-    public function negara() {
-        return $this->belongsTo(negara::class);
+    public function rw() {
+        return $this->belongsTo('App\Models\rw','id_rw');
     }
 
 

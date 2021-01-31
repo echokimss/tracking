@@ -20,6 +20,7 @@ class CreateKotasTable extends Migration
                   ->references('id')->on('provinsis')
                   ->onDelete('cascade');
             $table->string('nama_kota');
+            $table->string('kode_kota');
             $table->timestamps(); 
         });
     }

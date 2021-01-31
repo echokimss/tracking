@@ -13,16 +13,16 @@ class CreateJumlahKasus2sTable extends Migration
      */
     public function up()
     {
-        Schema::create('jumlah_kasus2s', function (Blueprint $table) {
+        Schema::create('jumlah_kasus2', function (Blueprint $table) {
             $table->increments('id');
-            $table->unsignedInteger('id_negara');
-            $table->foreign('id_negara')
+            $table->unsignedInteger('id_rw');
+            $table->foreign('id_rw')
                 ->references('id')
-                ->on('negaras')
+                ->on('rws')
                 ->onDelete('cascade');
-            $table->integer('positif');
-            $table->integer('sembuh');
-            $table->integer('meninggal');
+            $table->integer('jumlah_positif');
+            $table->integer('jumlah_meninggal');
+            $table->integer('jumlah_sembuh');
             $table->date('tanggal');
             $table->timestamps();
         });
@@ -35,6 +35,6 @@ class CreateJumlahKasus2sTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('jumlah_kasus2s');
+        Schema::dropIfExists('jumlah_kasus2');
     }
 }

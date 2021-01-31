@@ -20,6 +20,7 @@ class CreateKelurahansTable extends Migration
                   ->references('id')->on('kecamatans')
                   ->onDelete('cascade');
             $table->string('nama_kelurahan');
+            $table->string('kode_kelurahan');
             $table->timestamps(); 
         });
     }

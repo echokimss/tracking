@@ -8,10 +8,4 @@ use Illuminate\Database\Eloquent\Model;
 class negara extends Model
 {
     use HasFactory;
-
-    protected $table = "negaras";
-
-    public function kasus() {
-        return $this->hasMany(jumlahKasus2::class);
-    }
 }

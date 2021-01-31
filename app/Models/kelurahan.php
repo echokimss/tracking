@@ -10,13 +10,18 @@ class kelurahan extends Model
     use HasFactory;
 
     protected $table = "kelurahans";
+    protected $fillable = [
+        'kode_kelurahan',
+        'nama_kelurahan',
+        'id_kecamatan'
+    ];
     
     public function kecamatan() {
-        return $this->belongsTo('App/kecamatan','id_kecamatan');
+        return $this->belongsTo('App\Models\kecamatan','id_kecamatan');
     }
 
     public function kelurahan() {
-        return $this->hasMany('App/kelurahan','id_kelurahan');
+        return $this->hasMany('App/Models/kelurahan','id_kelurahan');
         
     }
 }
