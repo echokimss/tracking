@@ -14,7 +14,7 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('Frontend.welcome');
 });
 
 Auth::routes();
@@ -29,6 +29,9 @@ Route::get('admin', [App\Http\Controllers\HomeController::class, 'admin']);
 
 use App\Http\Controllers\ProvinsiController;
 Route::resource('provinsi', ProvinsiController::class);
+
+use App\Http\Controllers\FrontendController;
+Route::resource('/', FrontendController::class);
 
 use App\Http\Controllers\KotaController;
 Route::resource('kota', KotaController::class);

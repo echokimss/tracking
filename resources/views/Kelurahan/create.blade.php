@@ -16,21 +16,10 @@
                         </div>
                     @endif
             
-                <div class="mb-3">
-                        <label for="" class="form-label">Kecamatan</label>
-                       <select name="id_kecamatan" class="form-control" id="">
-                       @foreach($kecamatan as $data)
-                       <option value="{{$data->id}}">{{$data->nama_kecamatan}}</option>
-                       @endforeach
-                       </select>
-                    </div>
-                    <div class="mb-3">
-                        <label for="" class="form-label">Kode Kelurahan</label>
-                        <input type="text" name="kode_kelurahan" class="form-control" id="">
-                        @if($errors->has('kode_kelurahan'))
-                        <span class="text-danger">{{ $errors->first('kode_kelurahan')}}</span>
-                        @endif
-                    </div>
+           
+                   <dov class="col">
+                       <livewire:kellive>
+                   </dov>
                     <div class="mb-3">
                         <label for="" class="form-label">Nama kelurahan</label>
                         <input type="text" name="nama_kelurahan" class="form-control" id="">

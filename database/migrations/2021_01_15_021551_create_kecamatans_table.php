@@ -20,7 +20,6 @@ class CreateKecamatansTable extends Migration
                   ->references('id')->on('kotas')
                   ->onDelete('cascade');
             $table->string('nama_kecamatan');
-            $table->string('kode_kecamatan');
             $table->timestamps();
         });
     }

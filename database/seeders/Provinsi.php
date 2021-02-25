@@ -12,7 +12,7 @@ class Provinsi extends Seeder
      *
      * @return void
      */
-    public function run()
+    public function run()                                                                                                                             
     {
         DB::table('provinsis')->insert([
             ['kode_provinsi' => 11, 'nama_provinsi' => 'ACEH'],

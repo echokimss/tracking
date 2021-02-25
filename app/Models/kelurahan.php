@@ -11,7 +11,7 @@ class kelurahan extends Model
 
     protected $table = "kelurahans";
     protected $fillable = [
-        'kode_kelurahan',
+
         'nama_kelurahan',
         'id_kecamatan'
     ];
